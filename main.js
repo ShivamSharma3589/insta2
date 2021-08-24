@@ -64,9 +64,9 @@ const postData = [
         imageIcon : 'icons/user.jpg',
         name : 'pandatboyy',
         postImage : 'posts/pandat.jpg',
-        likes : '52,764 likes',
+        likes : '10,952,764 likes',
         caption : 'Just setting up my instagram 🙂😎.',
-        views : 'View all 4,520 comments',
+        views : 'View all 44,980 comments',
         postTime : '15 May 2021'
     },
     {
@@ -74,8 +74,8 @@ const postData = [
         name : 'here_is_naveen_',
         postImage : 'posts/naveen.jpg',
         likes : '9,952,764 likes',
-        caption : 'I know you are obsessed with me 😘.',
-        views : 'View all 4,520 comments',
+        caption : 'Why so serious?',
+        views : 'View all 4,993 comments',
         postTime : '8 August 2021'
     },
     {
