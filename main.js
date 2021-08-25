@@ -74,7 +74,7 @@ const postData = [
         name : 'here_is_naveen_',
         postImage : 'posts/naveen.jpg',
         likes : '9,952,764 likes',
-        caption : 'Why so serious?',
+        caption : 'Thinking about <strong>errors</strong> & <strong>bugs</strong>🤔.',
         views : 'View all 4,993 comments',
         postTime : '8 August 2021'
     },
