@@ -200,7 +200,7 @@ function postCreate(value) {
                           </div>
                           <div class="post-icons">
                               <div>
-                                  <img src="icons/heart-thin.png">
+                                  <img class="heart" src="icons/heart-thin.png">
                                   <img src="icons/comment.png">
                                   <img src="icons/forward.png">
                               </div>
@@ -216,7 +216,7 @@ function postCreate(value) {
                           <div class="add-comment">
                               <div>
                                   <img src="${storyData[0].image}">
-                                  <input type="text" placeholder="Add a comment..." id="input-comment">
+                                  <input type="text" placeholder="Add a comment...">
                               </div>
                               <div>
                                   <div><img src="icons/red-heart.png"> </div>
@@ -229,6 +229,7 @@ function postCreate(value) {
     posts.appendChild(postItem);  
 }
 
+let heart = document.getElementsByClassName('heart');
 window.onload = () => {
     // creating story onload 
     let storyLength = storyData.length;
@@ -240,7 +241,18 @@ window.onload = () => {
     let postLength = postData.length;
     for (let i = 0; i < postLength; i++) {
         postCreate(i);
+        // function to like the post 
+        heart[i].addEventListener('click',()=>{
+            if (heart[i].style.filter == "none") {
+                heart[i].src = 'icons/heart-thin.png';
+                heart[i].style.filter = 'invert(100%)';
+            } else {
+                heart[i].src = 'icons/red-heart.png';
+                heart[i].style.filter = 'none';
+            }
+        });
     }
 };
+
 
 
