@@ -196,6 +196,7 @@ function postCreate(value) {
                               </div>
                           </div>
                           <div class="post-image">
+                              <i class="fa fa-heart white-heart"></i>
                               <img src="${postData[value].postImage}">
                           </div>
                           <div class="post-icons">
@@ -229,7 +230,12 @@ function postCreate(value) {
     posts.appendChild(postItem);  
 }
 
+// global variables declared here 
 let heart = document.getElementsByClassName('heart');
+let postImage = document.getElementsByClassName('post-image');
+let whiteHeart = document.getElementsByClassName('white-heart');
+
+// window onload function goes here 
 window.onload = () => {
     // creating story onload 
     let storyLength = storyData.length;
@@ -250,6 +256,15 @@ window.onload = () => {
                 heart[i].src = 'icons/red-heart.png';
                 heart[i].style.filter = 'none';
             }
+        });
+        postImage[i].addEventListener('dblclick',()=>{
+            whiteHeart[i].style.display = 'flex';
+            whiteHeart[i].style.transform = 'scale(1)';
+            heart[i].src = 'icons/red-heart.png';
+            heart[i].style.filter = 'none';
+            setTimeout(() => {
+                whiteHeart[i].style.display = 'none';
+            }, 800);
         });
     }
 };
