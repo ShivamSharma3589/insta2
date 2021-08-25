@@ -53,6 +53,9 @@ article{
     height: 100vh;
     padding: 4rem 0 2rem;
 }
+section{
+    padding-bottom: 2rem;
+}
 section::-webkit-scrollbar{
     display: none;
 }
@@ -251,7 +254,7 @@ footer{
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 0.8rem 1rem 0.5rem;
+    padding: 0.8rem 1rem 0.7rem;
     background-color: black;
     border-top: 1px solid rgb(255, 255, 255,0.1);
 }
