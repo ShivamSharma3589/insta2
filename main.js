@@ -1,268 +1,246 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    user-select: none;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    /* font-family: 'Dosis', sans-serif; */
-    font-family: 'Roboto', sans-serif;
-}
-body{
-    background-color: black;
-    color: white;
-    height: 100vh;
-}
-/* utility classes goes here  */
+// story data goes here 
+const storyData = [
+    {
+        image: "icons/user.jpg",
+        name: "Your Story"
+    },
+    {
+        image: "stories/naveen.jpg",
+        name: "here_is_naveen_"
+    },
+    {
+        image: "stories/rdj.jpg",
+        name: "robertdowneyjr"
+    },
+    {
+        image: "stories/ian.jpg",
+        name: "iansomerhalder"
+    },
+    {
+        image: "stories/joseph.jpg",
+        name: "therealjoseph"
+    },
+    {
+        image: "stories/tom.jpg",
+        name: "tom_ellis_"
+    },
+    {
+        image: "stories/paul.jpg",
+        name: "paulwesley"
+    },
+    {
+        image: "stories/marvel.jpg",
+        name: "marvelstudios"
+    },
+    {
+        image: "stories/chris.jpg",
+        name: "chrishemsworth"
+    },
+    {
+        image: "stories/netflix.jpg",
+        name: "Netflix"
+    },
+    {
+        image: "stories/amazon.jpg",
+        name: "amazonprime"
+    },
+];
 
-/* header section goes here  */
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.164);
-    z-index: 100;
-    background-color: black;
-}
-header img{
-    filter: invert(100%);
-    padding: .5rem .3rem;
-    height: 3.3rem;
-}
-nav{
-    display:flex;
-    align-items: center;
-}
-nav i{
-    padding: .3rem 1rem;
-    font-size: 1.8rem !important;
-    font-weight: 900;
-}
-nav img{
-    padding: .3rem .7rem;
-    height: 2.2rem;
-}
-
-/* article section goes here  */
-article{
-    width: 100%;
-    height: 100vh;
-    padding: 4rem 0 2rem;
-}
-section::-webkit-scrollbar{
-    display: none;
-}
-/* story section goes here  */
-#story{
-    width: 100%;
-    height: 8rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    overflow: hidden;
-    overflow-x: auto;
-}
-#story::-webkit-scrollbar{
-    display: none;
-}
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 5.5rem;
-    height: 7.5rem;
-    margin-left: 1rem;
-}
-.image-container{
-    background: linear-gradient(210deg,rgb(255, 0, 128),#ff9900);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5.5rem;
-    height:5.5rem;
-}
-.image-container img{
-    border-radius: 50%;
-    width: 95%;
-    height: 95%;
-    padding: 0.3rem ;
-    background-color: black;
-}
-.user-name{
-    font-size: .65rem;
-    margin: 0.3rem 0;
+//story making function goes here
+function storyCreate(value) {
+    let story = document.getElementById('story');
+    let storyItem = document.createElement('div');
+    storyItem.classList.add('box');
+    storyItem.innerHTML = `<div class="image-container">
+                              <img src="${storyData[value].image}">
+                          </div>
+                          <div class="user-name">${storyData[value].name}</div>`
+    story.appendChild(storyItem);
 }
 
-/* posts section goes here  */
-#posts{
-    padding-bottom: .5rem;
-}
-#posts::-webkit-scrollbar{
-    display: none;
-}
-/* post header section goes here  */
-.post-name{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    font-size: .7rem;
-    font-weight: 600;
-}
-.post-name div:first-child{
-    display: flex;
-    align-items: center;
-}
-.post-name-image img{
-    width: 2.5rem;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.274);
-    padding: 2px;
-    margin: .5rem;
-}
-.post-name div:last-child img{
-    filter: invert(100%);
-    width: 1rem;
-    margin-right:1rem;
+// post data goes here 
+const postData = [
+    {
+        imageIcon : 'icons/user.jpg',
+        name : 'pandatboyy',
+        postImage : 'posts/pandat.jpg',
+        likes : '10,952,764 likes',
+        caption : 'Just setting up my instagram 🙂😎.',
+        views : 'View all 44,980 comments',
+        postTime : '15 May 2021'
+    },
+    {
+        imageIcon : 'stories/naveen.jpg',
+        name : 'here_is_naveen_',
+        postImage : 'posts/naveen.jpg',
+        likes : '9,952,764 likes',
+        caption : 'Why so serious?',
+        views : 'View all 4,993 comments',
+        postTime : '8 August 2021'
+    },
+    {
+        imageIcon : 'stories/ian.jpg',
+        name : 'iansomerhalder',
+        postImage : 'posts/ian.jpg',
+        likes : '52,764 likes',
+        caption : 'I know you are obsessed with me 😘.',
+        views : 'View all 4,520 comments',
+        postTime : '8 December 2021'
+    },
+    {
+        imageIcon : 'stories/joseph.jpg',
+        name : 'therealjoseph',
+        postImage : 'posts/joseph.jpg',
+        likes : '23,064 likes',
+        caption : "Yoy've heard of me?...Fantastic 😈",
+        views : 'View all 3,128 comments',
+        postTime : '16 May 2021'
+    },
+    {
+        imageIcon : 'stories/rdj.jpg',
+        name : 'robertdowneyjr',
+        postImage : 'posts/rdj.jpg',
+        likes : '12,345,764 likes',
+        caption : 'I Am... Iron Man 😉😎.',
+        views : 'View all 7,328 comments',
+        postTime : '4 April 2021'
+    },
+    {
+        imageIcon : 'stories/chris.jpg',
+        name : 'chrishemsworth',
+        postImage : 'posts/chris.jpg',
+        likes : '1,232,764 likes',
+        caption : 'I am thor god of thunder ⚡⚡⚡.',
+        views : 'View all 1,068 comments',
+        postTime : '11 August 2021'
+    },
+    {
+        imageIcon : 'stories/paul.jpg',
+        name : 'paulwesley',
+        postImage : 'posts/paul.jpg',
+        likes : '92,764 likes',
+        caption : 'To beat the villain 🦹‍♂️. you have to be the better villain 😈.',
+        views : 'View all 12,068 comments',
+        postTime : '23 July 2021'
+    },
+    {
+        imageIcon : 'stories/tom.jpg',
+        name : 'tom_ellis_',
+        postImage : 'posts/tom.jpg',
+        likes : '9,212,764 likes',
+        caption : 'I am a Devil of my Word 😈',
+        views : 'View all 71,328 comments',
+        postTime : '17 November 2021'
+    },
+    {
+        imageIcon : 'stories/marvel.jpg',
+        name : 'marvelstudios',
+        postImage : 'posts/marvel.jpg',
+        likes : '99,764 likes',
+        caption : 'Let the fun begin',
+        views : 'View all 31,028 comments',
+        postTime : '1 May 2021'
+    },
+    {
+        imageIcon : 'stories/netflix.jpg',
+        name : 'Netflix',
+        postImage : 'posts/netflix.jpg',
+        likes : '120,564 likes',
+        caption : 'Lucifer season 6 is out September 10 on Netflix worldwide.',
+        views : 'View all 10,328 comments',
+        postTime : '10 September 2021'
+    },
+    {
+        imageIcon : 'stories/amazon.jpg',
+        name : 'amazonprime',
+        postImage : 'posts/the boys.jpg',
+        likes : '9,782,764 likes',
+        caption : "A stranger is just a friend you ain't met yet.",
+        views : 'View all 1,397 comments',
+        postTime : '13 November 2021'
+    },
+    {
+        imageIcon : 'stories/marvel.jpg',
+        name : 'marvelstudios',
+        postImage : 'posts/marvel2.jpg',
+        likes : '12,764 likes',
+        caption : 'Legends never die.',
+        views : 'View all 99,068 comments',
+        postTime : '3 september 2021'
+    },
+    {
+        imageIcon : 'stories/amazon.jpg',
+        name : 'amazonprime',
+        postImage : 'posts/the boys2.jpg',
+        likes : '12,645,764 likes',
+        caption : "The bad guys don't get punished.",
+        views : 'View all 97,028 comments',
+        postTime : '21 October 2021'
+    },
+];
+
+//post making function goes here 
+function postCreate(value) {
+    let posts = document.getElementById('posts');
+    let postItem = document.createElement('div');
+    postItem.classList.add('post');
+    postItem.innerHTML = `<div class="post-name">
+                              <div>
+                                  <div class="post-name-image">
+                                      <img src="${postData[value].imageIcon}">
+                                  </div>
+                                  <div>${postData[value].name}</div>
+                              </div>
+                              <div>
+                                  <img src="icons/dots.png">
+                              </div>
+                          </div>
+                          <div class="post-image">
+                              <img src="${postData[value].postImage}">
+                          </div>
+                          <div class="post-icons">
+                              <div>
+                                  <img src="icons/heart-thin.png">
+                                  <img src="icons/comment.png">
+                                  <img src="icons/forward.png">
+                              </div>
+                              <div>
+                                  <img src="icons/save-thin.png">
+                              </div>
+                          </div>
+                          <div class="post-liked">${postData[value].likes}</div>
+                          <div class="post-comment">
+                              <strong>${postData[value].name}</strong> ${postData[value].caption}
+                          </div>
+                          <div class="post-view-comment">${postData[value].views}</div>
+                          <div class="add-comment">
+                              <div>
+                                  <img src="${storyData[0].image}">
+                                  <input type="text" placeholder="Add a comment..." id="input-comment">
+                              </div>
+                              <div>
+                                  <div><img src="icons/red-heart.png"> </div>
+                                  <div><img src="icons/laugh.png"> </div>
+                                  <div><img src="icons/add-icon.png"> </div>
+                              </div>
+                          </div>
+                          <div class="post-time">${postData[value].postTime}</div>`;
+    
+    posts.appendChild(postItem);  
 }
 
-/* post full size image goes here  */
-.post-image img{
-    width: 100%;
-}
+window.onload = () => {
+    // creating story onload 
+    let storyLength = storyData.length;
+    for (let i = 0; i < storyLength; i++) {
+        storyCreate(i);
+    }
 
-/* post icon images  */
-.post-icons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.post-icons img{
-    filter: invert(100%);
-    width: 1.5rem;
-    margin: .5rem 0 .5rem 1rem;
-}
-.post-icons > div:last-child img{
-    margin: .5rem 1rem .5rem 0;
-}
+    // creating post onload 
+    let postLength = postData.length;
+    for (let i = 0; i < postLength; i++) {
+        postCreate(i);
+    }
+};
 
-/* post likes   */
-.post-liked{
-    margin: 0 1rem;
-    font-weight: 600;
-    font-size: .7rem;
-    padding: .25rem 0 0;
-}
 
-/* post comments  */
-.post-comment{
-    font-size: .7rem;
-    margin: 0 1rem;
-    padding: .25rem 0  0;
-}
-
-/* post views  */
-.post-view-comment{
-    font-size: .7rem;
-    margin: 0 1rem;
-    color: rgba(255, 255, 255, 0.5);
-    padding: .25rem 0;
-}
-
-/* add a comment section goes here  */
-.add-comment{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 1rem;
-}
-.add-comment img{
-    width: 1.8rem;
-    border-radius: 50%;
-}
-.add-comment input{
-    border: none;
-    color: white;
-    background-color: black;
-    font-size: .9rem;
-    width: 80%;
-    padding: .3rem;
-}
-.add-comment > div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.add-comment > div:first-child{
-    justify-content: flex-start;
-    width: 75%;
-}
-.add-comment > div:last-child{
-    width: 25%;
-}
-.add-comment > div:last-child img{
-    width: 1rem;
-}
-.add-comment > div:last-child div:last-child img{
-    filter: invert(100%);
-}
-
-/* post time   */
-.post-time{
-    font-size: 0.5rem;
-    margin: 0.3rem 1rem .5rem;
-    color: rgba(255, 255, 255, 0.404);
-}
-
-/* caught up section goes here   */
-#caughtUp{
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 4rem 0 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-#tick img{
-    width: 5.5rem;
-}
-#heading{
-    font-size: 1.5rem;
-}
-#paragraph , #caughtUp a{
-    margin: .7rem 0;
-    font-size: 0.7rem;
-}
-#caughtUp a{
-    font-weight: 600;
-    color: rgb(0, 102, 255);
-    text-decoration: none;
-}
-
-/* footer section goes here  */
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    background-color: black;
-}
-footer img{
-    width: 1.7rem;
-    filter: invert(100%);
-}
-footer img:last-child{
-    filter: none;
-    border-radius: 50%;
-}
