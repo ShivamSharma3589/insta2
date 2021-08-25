@@ -242,5 +242,3 @@ window.onload = () => {
         postCreate(i);
     }
 };
-
-
