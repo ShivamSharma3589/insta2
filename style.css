@@ -24,7 +24,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.164);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 100;
     background-color: black;
 }
@@ -103,16 +103,13 @@ section::-webkit-scrollbar{
 #posts{
     padding-bottom: .5rem;
 }
-#posts::-webkit-scrollbar{
-    display: none;
-}
 /* post header section goes here  */
 .post-name{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    font-size: .7rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 .post-name div:first-child{
@@ -156,20 +153,20 @@ section::-webkit-scrollbar{
 .post-liked{
     margin: 0 1rem;
     font-weight: 600;
-    font-size: .7rem;
+    font-size: 1rem;
     padding: .25rem 0 0;
 }
 
 /* post comments  */
 .post-comment{
-    font-size: .7rem;
+    font-size: 1rem;
     margin: 0 1rem;
     padding: .25rem 0  0;
 }
 
 /* post views  */
 .post-view-comment{
-    font-size: .7rem;
+    font-size: 1rem;
     margin: 0 1rem;
     color: rgba(255, 255, 255, 0.5);
     padding: .25rem 0;
@@ -190,7 +187,7 @@ section::-webkit-scrollbar{
     border: none;
     color: white;
     background-color: black;
-    font-size: .9rem;
+    font-size: 1rem;
     width: 80%;
     padding: .3rem;
 }
@@ -215,14 +212,14 @@ section::-webkit-scrollbar{
 
 /* post time   */
 .post-time{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     margin: 0.3rem 1rem .5rem;
     color: rgba(255, 255, 255, 0.404);
 }
 
 /* caught up section goes here   */
 #caughtUp{
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 4rem 0 5rem;
     display: flex;
     justify-content: center;
@@ -254,8 +251,9 @@ footer{
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem 0.5rem;
     background-color: black;
+    border-top: 1px solid rgb(255, 255, 255,0.1);
 }
 footer img{
     width: 1.5rem;
