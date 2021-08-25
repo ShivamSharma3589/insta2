@@ -109,7 +109,7 @@ section::-webkit-scrollbar{
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 600;
 }
 .post-name div:first-child{
@@ -153,20 +153,20 @@ section::-webkit-scrollbar{
 .post-liked{
     margin: 0 1rem;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: .9rem;
     padding: .25rem 0 0;
 }
 
 /* post comments  */
 .post-comment{
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0 1rem;
     padding: .25rem 0  0;
 }
 
 /* post views  */
 .post-view-comment{
-    font-size: 1rem;
+    font-size: .9rem;
     margin: 0 1rem;
     color: rgba(255, 255, 255, 0.5);
     padding: .25rem 0;
@@ -187,7 +187,7 @@ section::-webkit-scrollbar{
     border: none;
     color: white;
     background-color: black;
-    font-size: 1rem;
+    font-size: .9rem;
     width: 80%;
     padding: .3rem;
 }
