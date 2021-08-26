@@ -225,7 +225,7 @@ function postCreate(value) {
                                         <img src="${postData[value].postImage}">
                                         <div>Saved</div>
                                     </div>
-                                    <div>Save to Collection</div>
+                                    <div>Saved to Collection</div>
                               </div>
                           </div>
                           <div class="post-icons">
