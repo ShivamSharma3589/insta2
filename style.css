@@ -167,6 +167,60 @@ section::-webkit-scrollbar{
     }
 }
 
+/* post saved notification code goes here  */
+.collection{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    z-index: 1;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    font-size: .9rem;
+    overflow: hidden;
+    background-color: rgb(26, 26, 26);
+    animation: Collect .5s ease;
+}
+
+/* first child div of collection  */
+.collection >div:first-child{
+    display: flex;
+    align-items: center;
+    
+}
+
+/* first child div of collection with saved text inside */
+.collection >div:first-child > div{
+    padding: 0 .3rem;
+}
+/* images goes here  */
+.collection img{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+/* class collection's last child  */
+.collection >div:last-child{
+    color:  rgb(57, 136, 255);
+}
+
+/* collection animation goes here  */
+@keyframes Collect{
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        height: 2.5rem;
+    }
+}
+
 /* post icon images  */
 .post-icons{
     display: flex;
