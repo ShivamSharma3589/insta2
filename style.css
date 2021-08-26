@@ -182,7 +182,7 @@ section::-webkit-scrollbar{
     font-size: .9rem;
     overflow: hidden;
     background-color: rgb(26, 26, 26);
-    animation: Collect .5s ease;
+    animation: Collect .3s ease;
 }
 
 /* first child div of collection  */
