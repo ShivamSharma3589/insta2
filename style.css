@@ -102,6 +102,81 @@ section::-webkit-scrollbar{
     margin: 0.3rem 0;
 }
 
+#storyContainer{
+    position: fixed;
+    z-index: 200;
+    top:0;
+    left:0;
+    height:100vh;
+    width: 100%;
+    color: white;
+    background-color: black;
+    display: none;
+    align-items: center;
+    animation: StoryReveal 0.4s ease;
+}
+#story-head{
+    padding: .5rem 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#story-head >div{
+    display: flex;
+    align-items: center;
+}
+#backButton{
+    text-shadow: 0px 0px 2px black;
+    padding: 0.5rem;
+    color:white;
+    z-index: 250;
+}
+#scale{
+    margin: 0 .2rem;
+    width: 100%;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.164);
+    background-color: rgba(255, 255, 255,.3);
+}
+#fill{
+    height: 1px;
+    width: 50%;
+    background-color: white;
+}
+#story-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem ;
+}
+#story-details > div:first-child{
+    display: flex;
+}
+#story-details > div:first-child > div{
+    padding: 0 0.5rem;
+    line-height: normal;
+}
+#story-details img{
+    width: 1.5rem;
+    border-radius: 50%;
+}
+#storyContainer video{
+    width: 100%;
+}
+
+/* animation for story  */
+@keyframes StoryReveal{
+    0%{
+        top:-100%;
+        left: -100%;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
 /* posts section goes here  */
 #posts{
     padding-bottom: .5rem;
