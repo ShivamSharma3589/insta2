@@ -2,47 +2,69 @@
 const storyData = [
     {
         image: "icons/user.jpg",
-        name: "Your Story"
+        name: "Your Story",
+        content : 'story/user.mp4',
+        storyTime : '11h'
     },
     {
         image: "stories/naveen.jpg",
-        name: "here_is_naveen_"
+        name: "here_is_naveen_",
+        content : 'story/naveen.mp4',
+        storyTime : '12h'
     },
     {
         image: "stories/rdj.jpg",
-        name: "robertdowneyjr"
+        name: "robertdowneyjr",
+        content : 'story/rdj.mp4',
+        storyTime : '3h'
     },
     {
         image: "stories/ian.jpg",
-        name: "iansomerhalder"
+        name: "iansomerhalder",
+        content : 'story/ian.mp4',
+        storyTime : '5h'
     },
     {
         image: "stories/joseph.jpg",
-        name: "therealjoseph"
+        name: "therealjoseph",
+        content : 'story/joseph.mp4',
+        storyTime : '10h'
     },
     {
         image: "stories/tom.jpg",
-        name: "tom_ellis_"
+        name: "tom_ellis_",
+        content : 'story/tom.mp4',
+        storyTime : '19h'
     },
     {
         image: "stories/paul.jpg",
-        name: "paulwesley"
+        name: "paulwesley",
+        content : 'story/paul.mp4',
+        storyTime : '15h'
     },
     {
         image: "stories/marvel.jpg",
-        name: "marvelstudios"
+        name: "marvelstudios",
+        content : 'story/marvel.mp4',
+        storyTime : '13h'
     },
     {
         image: "stories/chris.jpg",
-        name: "chrishemsworth"
+        name: "chrishemsworth",
+        content : 'story/chris.mp4',
+        storyTime : '12h'
     },
     {
         image: "stories/netflix.jpg",
-        name: "Netflix"
+        name: "Netflix",
+        content : 'story/netflix.mp4',
+        storyTime : '24h'
     },
     {
         image: "stories/amazon.jpg",
-        name: "amazonprime"
+        name: "amazonprime",
+        content : 'story/amazon.mp4',
+        storyTime : '11h'
     },
 ];
 
@@ -244,6 +266,15 @@ let whiteHeart = document.getElementsByClassName('white-heart');
 let savePost = document.getElementsByClassName('save-post');
 let isPostSaved = [];
 let collection = document.getElementsByClassName('collection');
+let storyContainer = document.getElementById('storyContainer');
+let Box = document.getElementsByClassName('box');
+let storyName = document.getElementById('story-name');
+let storyTime = document.getElementById('story-time');
+let storyImage = document.getElementById('story-image');
+let storyContent = document.getElementById('story-content');
+let backButton = document.getElementById('backButton');
+let fill = document.getElementById('fill');
+let scale = '';
 
 // window onload function goes here 
 window.onload = () => {
@@ -251,6 +282,17 @@ window.onload = () => {
     let storyLength = storyData.length;
     for (let i = 0; i < storyLength; i++) {
         storyCreate(i);
+        Box[i].addEventListener('click',()=>{
+            storyContainer.style.display = 'flex';
+            storyName.innerHTML = storyData[i].name;
+            storyTime.innerHTML = storyData[i].storyTime;
+            storyImage.src = storyData[i].image;
+            storyContent.src = storyData[i].content;
+            storyContent.play();
+            scale = setInterval(() => { // progress bar
+                fill.style.width = `${(storyContent.currentTime / storyContent.duration) * 100}%`;
+            }, 1);
+        });
     }
 
     // creating post onload 
@@ -297,5 +339,9 @@ window.onload = () => {
     }
 };
 
-
+backButton.addEventListener('click',()=>{
+    storyContent.pause();
+    storyContainer.style.display = 'none';
+    clearInterval(scale);
+});
 
