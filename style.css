@@ -160,14 +160,14 @@ section::-webkit-scrollbar{
     line-height: normal;
 }
 #story-image{
-    width: 3rem;
+    width: 1.8rem;
     border-radius: 50%;
     margin-left: 0.3rem;
 }
 #story-name,#story-time{
     text-shadow:0px 0px 2px black;
-    font-size:0.9rem;
-    font-weight:600; 
+    font-size:0.8rem;
+    font-weight:900; 
 }
 #story-time{
     color: rgba(255, 255, 255, 0.518);
@@ -440,4 +440,3 @@ footer img:last-child{
     filter: none;
     border-radius: 50%;
 }
-        
