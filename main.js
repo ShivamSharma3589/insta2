@@ -101,6 +101,15 @@ const postData = [
         postTime: '8 August 2021'
     },
     {
+        imageIcon: 'stories/rishu.jpg',
+        name: 'rishurathore78',
+        postImage: 'posts/rishu.jpg',
+        likes: '19,952,764 likes',
+        caption: 'Be the reason someone smiles today.”😊😊😘',
+        views: 'View all 40,993 comments',
+        postTime: '18 MAY 2021'
+    },
+    {
         imageIcon: 'stories/ian.jpg',
         name: 'iansomerhalder',
         postImage: 'posts/ian.jpg',
