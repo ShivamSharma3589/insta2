@@ -220,7 +220,7 @@ function postCreate(value) {
                                   <div class="post-name-image">
                                       <img src="${postData[value].imageIcon}">
                                   </div>
-                                  <div>${postData[value].name}</div>
+                                  <div>${postData[value].name}<img class="blue-tick" src="icons/blue-tick.png"></div>
                               </div>
                               <div>
                                   <img src="icons/dots.png">
