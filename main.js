@@ -103,7 +103,7 @@ const postData = [
     {
         imageIcon: 'stories/rishu.jpg',
         name: 'rishurathore78',
-        postImage: 'posts/rishu.jpg',
+        postImage: 'posts/rishu.jpeg',
         likes: '19,952,764 likes',
         caption: 'Be the reason someone smiles today.”😊😊😘',
         views: 'View all 40,993 comments',
